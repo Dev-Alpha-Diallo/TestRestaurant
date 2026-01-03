@@ -39,7 +39,10 @@
             </div>
         </div>
         <div class="hero-image">
-            <div class="image-placeholder"></div>
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Intérieur élégant du restaurant TestRestaurant" class="hero-img">
+                <div class="image-overlay"></div>
+            </div>
         </div>
         <div class="scroll-indicator">
             <div class="mouse">
@@ -65,7 +68,7 @@
             </div>
             
             <div class="menu-items">
-                <!-- Les éléments du menu seront générés par JS -->
+                <!-- Les éléments du menu seront générés par JS avec images -->
             </div>
         </div>
     </section>
@@ -94,7 +97,47 @@
                     </div>
                 </div>
                 <div class="about-image wow" data-wow-delay="0.3s">
-                    <div class="image-placeholder"></div>
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Notre chef étoilé préparant un plat" class="about-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header wow">
+                <h2 class="section-title">Notre <span>Galerie</span></h2>
+                <p class="section-subtitle">Découvrez l'ambiance et les plats de TestRestaurant</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item wow" data-wow-delay="0.1s">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" alt="Notre salle à manger élégante">
+                    <div class="gallery-overlay">
+                        <h3>Salle à manger</h3>
+                    </div>
+                </div>
+                <div class="gallery-item wow" data-wow-delay="0.2s">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Notre chef préparant un barbecue">
+                    <div class="gallery-overlay">
+                        <h3>Cuisine ouverte</h3>
+                    </div>
+                </div>
+                <div class="gallery-item wow" data-wow-delay="0.3s">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" alt="Pizza gourmet">
+                    <div class="gallery-overlay">
+                        <h3>Spécialités</h3>
+                    </div>
+                </div>
+                <div class="gallery-item wow" data-wow-delay="0.4s">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Table dressée pour le dîner">
+                    <div class="gallery-overlay">
+                        <h3>Service raffiné</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,7 +216,8 @@
                     </div>
                 </div>
                 <div class="contact-map wow" data-wow-delay="0.3s">
-                    <div class="map-placeholder">
+                    <div class="map-container">
+                        <img src="https://images.unsplash.com/photo-1509043759401-136742328bb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Carte de localisation de TestRestaurant" class="map-img">
                         <div class="map-overlay">
                             <h3>Notre adresse</h3>
                             <p>Venez nous rendre visite !</p>
@@ -198,6 +242,7 @@
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#menu">Menu</a></li>
                         <li><a href="#about">À propos</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
                         <li><a href="#reservation">Réservation</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
