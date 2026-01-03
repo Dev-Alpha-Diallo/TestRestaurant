@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestRestaurant | Cuisine raffinée</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#accueil" class="logo">Test<span>Restaurant</span></a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#reservation" class="nav-link">Réservation</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title wow">Une expérience <span>culinaire</span> exceptionnelle</h1>
+            <p class="hero-subtitle wow" data-wow-delay="0.2s">Depuis 1998, nous servons des plats raffinés préparés avec passion</p>
+            <div class="hero-buttons wow" data-wow-delay="0.4s">
+                <a href="#menu" class="btn btn-primary">Découvrir le menu</a>
+                <a href="#reservation" class="btn btn-secondary">Réserver une table</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header wow">
+                <h2 class="section-title">Notre <span>Menu</span></h2>
+                <p class="section-subtitle">Découvrez nos spécialités gastronomiques</p>
+            </div>
+            
+            <div class="menu-filters wow" data-wow-delay="0.2s">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="entrees">Entrées</button>
+                <button class="filter-btn" data-filter="plats">Plats principaux</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="boissons">Boissons</button>
+            </div>
+            
+            <div class="menu-items">
+                <!-- Les éléments du menu seront générés par JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text wow">
+                    <h2 class="section-title">Notre <span>Histoire</span></h2>
+                    <p>TestRestaurant a été fondé en 1998 par le chef étoilé Jean-Pierre Laurent. Avec plus de 20 ans d'expérience dans la gastronomie française, notre établissement s'est imposé comme une référence dans la région.</p>
+                    <p>Notre philosophie est simple : utiliser des produits frais et locaux pour créer des plats qui éveillent les sens et ravissent les palais les plus exigeants.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="23">0</span>
+                            <span class="stat-label">Ans d'expérience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="150">0</span>
+                            <span class="stat-label">Plats créés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5000">0</span>
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image wow" data-wow-delay="0.3s">
+                    <div class="image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="section">
+        <div class="container">
+            <div class="section-header wow">
+                <h2 class="section-title">Réservation</h2>
+                <p class="section-subtitle">Réservez votre table pour une expérience inoubliable</p>
+            </div>
+            
+            <div class="reservation-form wow" data-wow-delay="0.2s">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Heure</label>
+                            <input type="time" id="time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Nombre de personnes</label>
+                            <select id="guests" required>
+                                <option value="1">1 personne</option>
+                                <option value="2" selected>2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes</option>
+                                <option value="6">6 personnes</option>
+                                <option value="7">7 personnes</option>
+                                <option value="8">8 personnes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Demandes spéciales (optionnel)</label>
+                        <textarea id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Réserver maintenant</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info wow">
+                    <h2 class="section-title">Nous <span>contacter</span></h2>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Avenue Gastronomique, 75000 Paris</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> contact@testrestaurant.fr</p>
+                    <p><i class="fas fa-clock"></i> Ouvert du lundi au dimanche<br>Midi: 12h-14h30 | Soir: 19h-23h</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map wow" data-wow-delay="0.3s">
+                    <div class="map-placeholder">
+                        <div class="map-overlay">
+                            <h3>Notre adresse</h3>
+                            <p>Venez nous rendre visite !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#accueil" class="logo">Test<span>Restaurant</span></a>
+                    <p>Excellence culinaire depuis 1998</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#reservation">Réservation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recevez nos actualités et offres spéciales</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TestRestaurant. Tous droits réservés.</p>
+                <p>Site créé avec passion pour la gastronomie</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmation -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle"></i>
+                <h3>Réservation confirmée !</h3>
+                <p>Nous avons bien reçu votre réservation et vous attendons avec impatience.</p>
+                <p>Un email de confirmation vous a été envoyé.</p>
+                <button class="btn btn-primary close-modal-btn">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
